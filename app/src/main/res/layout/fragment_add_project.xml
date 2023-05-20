@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddProject">
+    <data>
+        <variable
+            name="AddProjectViewModel"
+            type="com.example.semestralka.AddProjectViewModel"/>
+    </data>
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/addProjectConstraint"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    <TextView
+        android:id="@+id/newProjectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_projectFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/ProjectNameTextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/project_name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@id/newProjectText"
+        app:layout_constraintTop_toBottomOf="@id/newProjectText" />
+    <TextView
+        android:id="@+id/newProjectHoursText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recommended_hours"
+        app:layout_constraintStart_toStartOf="@id/ProjectNameTextField"
+        app:layout_constraintTop_toBottomOf="@id/ProjectNameTextField"/>
+
+    <EditText
+        android:id="@+id/ProjectHoursTextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@id/newProjectHoursText"
+        app:layout_constraintTop_toBottomOf="@id/newProjectHoursText" />
+
+
+    <Button
+        android:id="@+id/addProjectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ProjectHoursTextField"
+        android:layout_marginTop="500dp"
+        android:text="@string/add"
+        android:layout_gravity="center"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

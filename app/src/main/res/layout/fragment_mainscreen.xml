@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Mainscreen">
+    <data>
+        <variable
+            name="MainscreenViewModel"
+            type="com.example.semestralka.MainscreenViewModel"/>
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/navToSummaryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:text="@string/summary"
+            android:layout_gravity="right"
+            />
+        <EditText
+            android:id="@+id/projectText"
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:paddingLeft="15dp"
+            android:ems="16"
+            android:inputType="textPersonName"
+            android:text="@string/project_name"
+            android:textSize="15sp"/>
+
+        <Spinner
+            android:id="@+id/projectSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:minHeight="48dp"
+            android:padding="15dp"
+            android:textAlignment="gravity"
+            android:textSize="16sp"
+            android:spinnerMode="dialog"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="18dp" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/startCounting"
+            android:layout_gravity="center"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="19dp" />
+
+        <CheckBox
+            android:id="@+id/showTimeCheckBox"
+            android:layout_width="374dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="15dp"
+            android:checked="true"
+            android:text="@string/showtime" />
+
+        <TextView
+            android:id="@+id/timeElapsedLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/timeElapsedOnProject" />
+
+        <TextView
+            android:id="@+id/timeElapsedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/time"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/stopCounting"
+            android:layout_gravity="left"
+            />
+        <Button
+            android:id="@+id/resetTimerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resetButton"
+            android:layout_weight="1" />
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="167dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/addProjectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/addProject" />
+
+            <Button
+                android:id="@+id/updateTimeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/updateProject" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</layout>
